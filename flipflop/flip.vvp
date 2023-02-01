@@ -1,0 +1,57 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01269F10 .scope module, "flipflop_tb" "flipflop_tb" 2 1;
+ .timescale 0 0;
+v01263B38_0 .var "clk", 0 0;
+v01263600_0 .var "d", 0 0;
+v01263658_0 .var/i "i", 31 0;
+v012636B0_0 .net "out", 0 0, v01263AE0_0; 1 drivers
+S_01269608 .scope module, "dff" "flipflop" 2 6, 3 1, S_01269F10;
+ .timescale 0 0;
+v012654D8_0 .net "clk", 0 0, v01263B38_0; 1 drivers
+v01263A88_0 .net "d", 0 0, v01263600_0; 1 drivers
+v01263AE0_0 .var "q", 0 0;
+E_01267D68 .event posedge, v012654D8_0;
+    .scope S_01269608;
+T_0 ;
+    %wait E_01267D68;
+    %load/v 8, v01263A88_0, 1;
+    %set/v v01263AE0_0, 8, 1;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_01269F10;
+T_1 ;
+    %set/v v01263B38_0, 0, 1;
+    %vpi_call 2 10 "$dumpfile", "flipflop-wvfrm.vcd";
+    %vpi_call 2 11 "$dumpvars", 1'sb0, S_01269F10;
+    %vpi_call 2 12 "$display", "clk:data:out";
+    %vpi_call 2 13 "$monitor", v01263B38_0, v01263600_0, v012636B0_0;
+    %set/v v01263658_0, 0, 32;
+T_1.0 ;
+    %load/v 8, v01263658_0, 32;
+   %cmpi/s 8, 4, 32;
+    %jmp/0xz T_1.1, 5;
+    %load/v 8, v01263658_0, 2; Only need 2 of 32 bits
+; Save base=8 wid=2 in lookaside.
+    %set/v v01263600_0, 8, 1;
+    %load/v 8, v01263B38_0, 1;
+    %inv 8, 1;
+    %set/v v01263B38_0, 8, 1;
+    %delay 5, 0;
+    %ix/load 0, 1, 0;
+    %load/vp0/s 8, v01263658_0, 32;
+    %set/v v01263658_0, 8, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "flipflop_tb.v";
+    "flipflop.v";
