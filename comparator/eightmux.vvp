@@ -1,0 +1,209 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55f39dabe480 .scope module, "eightmux_tb" "eightmux_tb" 2 1;
+ .timescale 0 0;
+v0x55f39daf0040_0 .net *"_ivl_19", 2 0, L_0x55f39db01eb0;  1 drivers
+L_0x7fd80cbb7018 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0x55f39daf0140_0 .net "a", 31 0, L_0x7fd80cbb7018;  1 drivers
+L_0x7fd80cbb7060 .functor BUFT 1, C4<00000000000000000000000000000001>, C4<0>, C4<0>, C4<0>;
+v0x55f39daf0200_0 .net "b", 31 0, L_0x7fd80cbb7060;  1 drivers
+L_0x7fd80cbb70a8 .functor BUFT 1, C4<00000000000000000000000000000010>, C4<0>, C4<0>, C4<0>;
+v0x55f39daf02a0_0 .net "c", 31 0, L_0x7fd80cbb70a8;  1 drivers
+L_0x7fd80cbb70f0 .functor BUFT 1, C4<00000000000000000000000000000011>, C4<0>, C4<0>, C4<0>;
+v0x55f39daf0360_0 .net "d", 31 0, L_0x7fd80cbb70f0;  1 drivers
+L_0x7fd80cbb7138 .functor BUFT 1, C4<00000000000000000000000000000100>, C4<0>, C4<0>, C4<0>;
+v0x55f39daf0420_0 .net "e", 31 0, L_0x7fd80cbb7138;  1 drivers
+L_0x7fd80cbb7180 .functor BUFT 1, C4<00000000000000000000000000000101>, C4<0>, C4<0>, C4<0>;
+v0x55f39daf04e0_0 .net "f", 31 0, L_0x7fd80cbb7180;  1 drivers
+L_0x7fd80cbb71c8 .functor BUFT 1, C4<00000000000000000000000000000110>, C4<0>, C4<0>, C4<0>;
+v0x55f39daf05a0_0 .net "g", 31 0, L_0x7fd80cbb71c8;  1 drivers
+L_0x7fd80cbb7210 .functor BUFT 1, C4<00000000000000000000000000000111>, C4<0>, C4<0>, C4<0>;
+v0x55f39daf0660_0 .net "h", 31 0, L_0x7fd80cbb7210;  1 drivers
+v0x55f39daf07b0_0 .var/i "i", 31 0;
+v0x55f39daf0890_0 .net "out", 31 0, L_0x55f39db01c20;  1 drivers
+v0x55f39daf0950_0 .net "select", 2 0, L_0x55f39db01e10;  1 drivers
+L_0x55f39db01e10 .part L_0x55f39db01eb0, 0, 3;
+L_0x55f39db01eb0 .part v0x55f39daf07b0_0, 0, 3;
+S_0x55f39dabdb10 .scope module, "eightmux" "eightmux" 2 14, 3 28 0, S_0x55f39dabe480;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 32 "c";
+    .port_info 3 /INPUT 32 "d";
+    .port_info 4 /INPUT 32 "e";
+    .port_info 5 /INPUT 32 "f";
+    .port_info 6 /INPUT 32 "g";
+    .port_info 7 /INPUT 32 "h";
+    .port_info 8 /INPUT 3 "select";
+    .port_info 9 /OUTPUT 32 "out";
+v0x55f39daef2d0_0 .net "a", 31 0, L_0x7fd80cbb7018;  alias, 1 drivers
+v0x55f39daef400_0 .net "b", 31 0, L_0x7fd80cbb7060;  alias, 1 drivers
+v0x55f39daef510_0 .net "c", 31 0, L_0x7fd80cbb70a8;  alias, 1 drivers
+v0x55f39daef600_0 .net "d", 31 0, L_0x7fd80cbb70f0;  alias, 1 drivers
+v0x55f39daef710_0 .net "e", 31 0, L_0x7fd80cbb7138;  alias, 1 drivers
+v0x55f39daef870_0 .net "f", 31 0, L_0x7fd80cbb7180;  alias, 1 drivers
+v0x55f39daef980_0 .net "g", 31 0, L_0x7fd80cbb71c8;  alias, 1 drivers
+v0x55f39daefa90_0 .net "h", 31 0, L_0x7fd80cbb7210;  alias, 1 drivers
+v0x55f39daefba0_0 .net "out", 31 0, L_0x55f39db01c20;  alias, 1 drivers
+v0x55f39daefc60_0 .net "select", 2 0, L_0x55f39db01e10;  alias, 1 drivers
+v0x55f39daefd20_0 .net "w1", 31 0, L_0x55f39db01120;  1 drivers
+v0x55f39daefde0_0 .net "w2", 31 0, L_0x55f39db017e0;  1 drivers
+L_0x55f39db01410 .part L_0x55f39db01e10, 0, 2;
+L_0x55f39db01af0 .part L_0x55f39db01e10, 0, 2;
+L_0x55f39db01ce0 .part L_0x55f39db01e10, 2, 1;
+S_0x55f39dabd110 .scope module, "finalmux" "basemux" 3 39, 3 4 0, S_0x55f39dabdb10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "select";
+    .port_info 3 /OUTPUT 32 "out";
+v0x55f39dabdd90_0 .net "a", 31 0, L_0x55f39db01120;  alias, 1 drivers
+v0x55f39daeb420_0 .net "b", 31 0, L_0x55f39db017e0;  alias, 1 drivers
+v0x55f39daeb500_0 .net "out", 31 0, L_0x55f39db01c20;  alias, 1 drivers
+v0x55f39daeb5c0_0 .net "select", 0 0, L_0x55f39db01ce0;  1 drivers
+L_0x55f39db01c20 .functor MUXZ 32, L_0x55f39db01120, L_0x55f39db017e0, L_0x55f39db01ce0, C4<>;
+S_0x55f39daeb700 .scope module, "mux1" "fourmux" 3 36, 3 13 0, S_0x55f39dabdb10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 32 "c";
+    .port_info 3 /INPUT 32 "d";
+    .port_info 4 /INPUT 2 "select";
+    .port_info 5 /OUTPUT 32 "out";
+v0x55f39daecc60_0 .net "a", 31 0, L_0x7fd80cbb7018;  alias, 1 drivers
+v0x55f39daecd40_0 .net "b", 31 0, L_0x7fd80cbb7060;  alias, 1 drivers
+v0x55f39daece10_0 .net "c", 31 0, L_0x7fd80cbb70a8;  alias, 1 drivers
+v0x55f39daecf10_0 .net "d", 31 0, L_0x7fd80cbb70f0;  alias, 1 drivers
+v0x55f39daecfe0_0 .net "out", 31 0, L_0x55f39db01120;  alias, 1 drivers
+v0x55f39daed120_0 .net "select", 1 0, L_0x55f39db01410;  1 drivers
+v0x55f39daed1e0_0 .net "w1", 31 0, L_0x55f39db00ea0;  1 drivers
+v0x55f39daed2f0_0 .net "w2", 31 0, L_0x55f39db00fe0;  1 drivers
+L_0x55f39db00f40 .part L_0x55f39db01410, 0, 1;
+L_0x55f39db01080 .part L_0x55f39db01410, 0, 1;
+L_0x55f39db01370 .part L_0x55f39db01410, 1, 1;
+S_0x55f39daeb9a0 .scope module, "in1" "basemux" 3 21, 3 4 0, S_0x55f39daeb700;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "select";
+    .port_info 3 /OUTPUT 32 "out";
+v0x55f39daebb80_0 .net "a", 31 0, L_0x7fd80cbb7018;  alias, 1 drivers
+v0x55f39daebc80_0 .net "b", 31 0, L_0x7fd80cbb7060;  alias, 1 drivers
+v0x55f39daebd60_0 .net "out", 31 0, L_0x55f39db00ea0;  alias, 1 drivers
+v0x55f39daebe20_0 .net "select", 0 0, L_0x55f39db00f40;  1 drivers
+L_0x55f39db00ea0 .functor MUXZ 32, L_0x7fd80cbb7018, L_0x7fd80cbb7060, L_0x55f39db00f40, C4<>;
+S_0x55f39daebf60 .scope module, "in2" "basemux" 3 22, 3 4 0, S_0x55f39daeb700;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "select";
+    .port_info 3 /OUTPUT 32 "out";
+v0x55f39daec1d0_0 .net "a", 31 0, L_0x7fd80cbb70a8;  alias, 1 drivers
+v0x55f39daec2b0_0 .net "b", 31 0, L_0x7fd80cbb70f0;  alias, 1 drivers
+v0x55f39daec390_0 .net "out", 31 0, L_0x55f39db00fe0;  alias, 1 drivers
+v0x55f39daec480_0 .net "select", 0 0, L_0x55f39db01080;  1 drivers
+L_0x55f39db00fe0 .functor MUXZ 32, L_0x7fd80cbb70a8, L_0x7fd80cbb70f0, L_0x55f39db01080, C4<>;
+S_0x55f39daec5f0 .scope module, "outmux" "basemux" 3 24, 3 4 0, S_0x55f39daeb700;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "select";
+    .port_info 3 /OUTPUT 32 "out";
+v0x55f39daec870_0 .net "a", 31 0, L_0x55f39db00ea0;  alias, 1 drivers
+v0x55f39daec960_0 .net "b", 31 0, L_0x55f39db00fe0;  alias, 1 drivers
+v0x55f39daeca30_0 .net "out", 31 0, L_0x55f39db01120;  alias, 1 drivers
+v0x55f39daecb30_0 .net "select", 0 0, L_0x55f39db01370;  1 drivers
+L_0x55f39db01120 .functor MUXZ 32, L_0x55f39db00ea0, L_0x55f39db00fe0, L_0x55f39db01370, C4<>;
+S_0x55f39daed4c0 .scope module, "mux2" "fourmux" 3 37, 3 13 0, S_0x55f39dabdb10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 32 "c";
+    .port_info 3 /INPUT 32 "d";
+    .port_info 4 /INPUT 2 "select";
+    .port_info 5 /OUTPUT 32 "out";
+v0x55f39daeea70_0 .net "a", 31 0, L_0x7fd80cbb7138;  alias, 1 drivers
+v0x55f39daeeb50_0 .net "b", 31 0, L_0x7fd80cbb7180;  alias, 1 drivers
+v0x55f39daeec20_0 .net "c", 31 0, L_0x7fd80cbb71c8;  alias, 1 drivers
+v0x55f39daeed20_0 .net "d", 31 0, L_0x7fd80cbb7210;  alias, 1 drivers
+v0x55f39daeedf0_0 .net "out", 31 0, L_0x55f39db017e0;  alias, 1 drivers
+v0x55f39daeef30_0 .net "select", 1 0, L_0x55f39db01af0;  1 drivers
+v0x55f39daeeff0_0 .net "w1", 31 0, L_0x55f39db01540;  1 drivers
+v0x55f39daef100_0 .net "w2", 31 0, L_0x55f39db01680;  1 drivers
+L_0x55f39db015e0 .part L_0x55f39db01af0, 0, 1;
+L_0x55f39db01740 .part L_0x55f39db01af0, 0, 1;
+L_0x55f39db01a50 .part L_0x55f39db01af0, 1, 1;
+S_0x55f39daed740 .scope module, "in1" "basemux" 3 21, 3 4 0, S_0x55f39daed4c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "select";
+    .port_info 3 /OUTPUT 32 "out";
+v0x55f39daed990_0 .net "a", 31 0, L_0x7fd80cbb7138;  alias, 1 drivers
+v0x55f39daeda90_0 .net "b", 31 0, L_0x7fd80cbb7180;  alias, 1 drivers
+v0x55f39daedb70_0 .net "out", 31 0, L_0x55f39db01540;  alias, 1 drivers
+v0x55f39daedc30_0 .net "select", 0 0, L_0x55f39db015e0;  1 drivers
+L_0x55f39db01540 .functor MUXZ 32, L_0x7fd80cbb7138, L_0x7fd80cbb7180, L_0x55f39db015e0, C4<>;
+S_0x55f39daedd70 .scope module, "in2" "basemux" 3 22, 3 4 0, S_0x55f39daed4c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "select";
+    .port_info 3 /OUTPUT 32 "out";
+v0x55f39daedfe0_0 .net "a", 31 0, L_0x7fd80cbb71c8;  alias, 1 drivers
+v0x55f39daee0c0_0 .net "b", 31 0, L_0x7fd80cbb7210;  alias, 1 drivers
+v0x55f39daee1a0_0 .net "out", 31 0, L_0x55f39db01680;  alias, 1 drivers
+v0x55f39daee290_0 .net "select", 0 0, L_0x55f39db01740;  1 drivers
+L_0x55f39db01680 .functor MUXZ 32, L_0x7fd80cbb71c8, L_0x7fd80cbb7210, L_0x55f39db01740, C4<>;
+S_0x55f39daee400 .scope module, "outmux" "basemux" 3 24, 3 4 0, S_0x55f39daed4c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /INPUT 32 "b";
+    .port_info 2 /INPUT 1 "select";
+    .port_info 3 /OUTPUT 32 "out";
+v0x55f39daee680_0 .net "a", 31 0, L_0x55f39db01540;  alias, 1 drivers
+v0x55f39daee770_0 .net "b", 31 0, L_0x55f39db01680;  alias, 1 drivers
+v0x55f39daee840_0 .net "out", 31 0, L_0x55f39db017e0;  alias, 1 drivers
+v0x55f39daee940_0 .net "select", 0 0, L_0x55f39db01a50;  1 drivers
+L_0x55f39db017e0 .functor MUXZ 32, L_0x55f39db01540, L_0x55f39db01680, L_0x55f39db01a50, C4<>;
+    .scope S_0x55f39dabe480;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0x55f39daf07b0_0, 0, 32;
+T_0.0 ;
+    %load/vec4 v0x55f39daf07b0_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_0.1, 5;
+    %delay 20, 0;
+    %load/vec4 v0x55f39daf0890_0;
+    %parti/s 3, 0, 2;
+    %load/vec4 v0x55f39daf0950_0;
+    %cmp/e;
+    %jmp/0xz  T_0.2, 4;
+    %vpi_call 2 23 "$display", "CORRECT OUTPUT - Select bit = %b", &PV<v0x55f39daf07b0_0, 0, 3> {0 0 0};
+    %jmp T_0.3;
+T_0.2 ;
+    %vpi_call 2 25 "$display", "INCORRECT OUTPUT - Select bit = %b, Got: %b, Expected: %b", &PV<v0x55f39daf07b0_0, 0, 3>, &PV<v0x55f39daf0890_0, 0, 3>, v0x55f39daf0950_0 {0 0 0};
+T_0.3 ;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0x55f39daf07b0_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0x55f39daf07b0_0, 0, 32;
+    %jmp T_0.0;
+T_0.1 ;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "eightmux_tb.v";
+    "eightmux.v";

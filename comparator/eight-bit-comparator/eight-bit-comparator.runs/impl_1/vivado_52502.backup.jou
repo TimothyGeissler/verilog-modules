@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Feb  1 19:25:32 2023
+# Process ID: 52502
+# Current directory: /home/timdg/Documents/Verilog/comparator/eight-bit-comparator/eight-bit-comparator.runs/impl_1
+# Command line: vivado -log eightbit.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source eightbit.tcl -notrace
+# Log file: /home/timdg/Documents/Verilog/comparator/eight-bit-comparator/eight-bit-comparator.runs/impl_1/eightbit.vdi
+# Journal file: /home/timdg/Documents/Verilog/comparator/eight-bit-comparator/eight-bit-comparator.runs/impl_1/vivado.jou
+# Running On: pop-os, OS: Linux, CPU Frequency: 2733.858 MHz, CPU Physical cores: 8, Host memory: 16623 MB
+#-----------------------------------------------------------
+source eightbit.tcl -notrace
